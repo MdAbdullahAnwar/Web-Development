@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Property</title>
+
+    <style>
+        
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+
+        .div1{
+            border:solid black 2px;
+            height:800px;
+            width:1200px;
+            padding:20px;
+            margin:10px;
+        }
+
+        .div2{
+            background-color: aquamarine;
+            border:solid black 2px;
+            height:5000px;
+            width:1200px;
+            padding:20px;
+            margin:10px;
+        }
+
+        .Jasmine{
+            position:sticky;
+            top:100px;
+        }
+
+        .Lotus{
+            position:relative; 
+            top:50px;
+        }
+
+        .Rose{
+            position:absolute;
+            top:100px;
+        }
+
+        .Tulip{
+            position:fixed;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="div1">
+        <img
+            src="Jasmine.jpeg"
+            alt="Jasmine"
+            width="200px"
+            height="200px"
+            class="Jasmine"
+        />
+
+        <img
+            src="Lotus.jpeg"
+            alt="Lotus"
+            width="200px"
+            height="200px"
+            class="Lotus"
+        />
+        <img
+            src="Rose.jpeg"
+            alt="Rose"
+            width="200px"
+            height="200px"
+            class="Rose"
+        />
+        <img
+            src="Tulip.jpeg"
+            alt="Tulip"
+            width="200px"
+            height="200px"
+            class="Tulip"
+        />
+    </div>
+
+    <div class="div2">
+        Box2
+    </div>
+
+</body>
+</html>
