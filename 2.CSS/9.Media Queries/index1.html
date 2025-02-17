@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        .container{
+            margin:5px;
+            padding:5px;
+            display:flex;
+            background-color: beige;
+            border:solid black 5px;
+        }
+        .text{
+            background-color: aqua;
+            border:solid black 2px;
+            margin:2px;
+        }
+        .Photo{
+            background-color: azure;
+            border:solid black 2px;
+            margin:2px;
+            width:500px;
+        }
+        #text1{
+            border:solid black 2px;
+            margin:2px;
+            height:165px;
+            overflow:scroll;
+        }
+        #text2{
+            border:solid black 2px;
+            margin:2px;
+            height:165px;
+            overflow:scroll;
+        }
+        @media (max-width:640px){
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="text">
+            <p id="text1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae possimus dolorum amet libero aspernatur asperiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum explicabo magnam eligendi iure molestiae? </p>
+            <hr>
+            <p id="text2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam ea nostrum architecto quia, impedit nulla? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim iusto ratione magni perferendis iure ducimus quibusdam fuga aut.</p>
+        </div>
+        <div class="image">
+            <img 
+                src="Jasmine.jpeg"
+                alt="Jasmine"
+                class="Photo"
+            />
+        </div>
+    </div>
+</body>
+</html>
