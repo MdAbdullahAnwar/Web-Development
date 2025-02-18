@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box & Text Shadow & Variables</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        :root{
+            --clr:brown;
+            --wdt:550px;
+        }
+        .container{
+            background-color: azure;
+            border:solid black 5px;
+            height:100vh;
+            width:100vw;
+            margin:3px;
+            padding:3px;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            border:solid black 5px;
+            background-color: rgb(70, 194, 194);
+            height:400px;
+            width:var(--wdt);
+            margin:3px;
+            padding:3px;
+            box-shadow:10px 10px 5px 1px var(--clr), 20px 20px 1px 2px greenyellow;
+        }
+        .Jasmine{
+            height:150px;
+            width:150px;
+        }
+        #heading{
+            text-shadow:5px 5px 1px green,15px 15px 2px red,25px 25px 3px blue;
+            margin:8px;
+            padding:8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <img
+                src="Jasmine.jpeg"
+                alt="Jasmine"
+                class="Jasmine"
+            />
+            <h1 id="heading">Box Shadow</h1>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti molestias optio maiores, ut voluptatibus culpa illo. Non aspernatur officiis illo minima, doloribus quas, modi dignissimos, consectetur commodi doloremque repellendus quod ratione excepturi molestias ut quis! Animi, facere vero. Accusamus quae officia fugit nostrum necessitatibus, quod provident. Porro at veritatis enim consequatur, blanditiis ullam dolorum quibusdam unde voluptate a vitae reprehenderit nihil non, ut voluptas impedit, harum eum pariatur? </p>
+        </div>
+    </div>
+</body>
+</html>
