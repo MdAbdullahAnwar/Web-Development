@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D-Transforms</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        .container{
+            border:solid black 5px;
+            background-color: beige;
+            height:800px;
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+        .box{
+            border:solid black 5px;
+            background-color: chartreuse;
+            height:400px;
+            width:400px;
+            transition: all 3s linear 1s;
+        }
+        .box:hover{
+            transform:rotate(45deg);
+            /* transform:scale(2);
+            transform:translate(500px);
+            transform:skew(45deg);  */
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>This is a Box</p>
+        </div>
+    </div>
+</body>
+</html>
