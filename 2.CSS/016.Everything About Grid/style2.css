@@ -1,0 +1,30 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container{
+    height:100%;
+    width:100%;
+    background-color: rgb(65, 59, 59);
+    padding:4rem;
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,200px);
+    gap:0.4rem;
+    border:solid white 2px;
+    /* justify-items:stretch; */
+    /* align-items:end; */
+    place-items:center;
+}
+
+.box{
+    height:100px;
+    width:100px; 
+    border:solid rgb(230, 227, 227) 5px;
+    background-color: rgb(91, 161, 91);
+    /* justify-self:stretch; */
+    /* align-self:stretch; */
+    /* place-self:strech; */
+}

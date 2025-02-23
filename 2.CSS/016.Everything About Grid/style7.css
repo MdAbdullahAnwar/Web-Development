@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.container{
+    height:100vh;
+    width:100vw;
+    padding:3rem;
+    background-color: rgba(71, 64, 64, 0.897);
+    display:grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(6,1fr);
+    gap:3rem
+}
+
+.box{
+    height:100%;
+    width:100%;
+    border:solid black 2px;
+    background-color: rgba(65, 6, 52, 0.699);
+    color:rgba(30, 139, 57, 0.952);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
