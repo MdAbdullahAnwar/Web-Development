@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Area 4</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body {
+            height: 100vh;
+            width: 100vw;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(88, 84, 84);
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+            grid-template-areas:
+                "box1 box1 box2 box2"   
+                "box1 box1 box2 box2" 
+                "box3 box4 box4 box4" 
+                "box3 box4 box4 box4" 
+                "box3 box4 box4 box4" 
+                "box5 box5 box5 box5"
+            ;
+        }
+        .items {
+            color: white;
+            border: solid black 2px;
+            background-color: rgb(76, 76, 167);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1 {
+            grid-area: box1;
+        }
+        .box2 {
+            grid-area: box2;
+        }
+        .box3 {
+            grid-area: box3;
+        }
+        .box4 {
+            grid-area: box4;
+        }
+        .box5 {
+            grid-area: box5;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="items box1">Box 1</div>
+        <div class="items box2">Box 2</div>
+        <div class="items box3">Box 3</div>
+        <div class="items box4">Box 4</div>
+        <div class="items box5">Box 5</div>
+    </div>
+</body>
+</html>

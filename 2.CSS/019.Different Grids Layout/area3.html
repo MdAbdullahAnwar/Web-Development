@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Area 3</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body {
+            height: 100vh;
+            width: 100vw;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(88, 84, 84);
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+            grid-template-areas:
+                "header header header"
+                "sidebar content content"
+                "sidebar content content"
+                "footer footer footer";
+        }
+        .items {
+            color: white;
+            border: solid black 2px;
+            background-color: rgb(76, 76, 167);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .header {
+            grid-area: header;
+        }
+        .sidebar {
+            grid-area: sidebar;
+        }
+        .content {
+            grid-area: content;
+        }
+        .footer {
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="items header">Header</div>
+        <div class="items sidebar">Sidebar</div>
+        <div class="items content">Content</div>
+        <div class="items footer">Footer</div>
+    </div>
+</body>
+</html>

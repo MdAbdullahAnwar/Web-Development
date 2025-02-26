@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Area 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .body {
+            height: 100vh;
+            width: 100vw;
+        }
+        .container {
+            height: 100vh;
+            width: 100vw;
+            background-color: rgb(88, 84, 84);
+            padding: 2rem;
+            display: grid;
+            gap: 2rem;
+            grid-template-areas:
+                "box1 box1 box2 box3"   
+                "box4 box5 box6 ." 
+                "box7 box7 box8 box9"
+                "box7 box7 box10 ." 
+                "box11 box11 box11 box12"  
+            ;
+        }
+        .box {
+            color: white;
+            border: solid black 2px;
+            background-color: rgb(76, 76, 167);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .b1 {
+            grid-area: box1;
+        }
+        .b2 {
+            grid-area: box2;
+        }
+        .b3 {
+            grid-area: box3;
+        }
+        .b4 {
+            grid-area: box4;
+        }
+        .b5 {
+            grid-area: box5;
+        }
+        .b6 {
+            grid-area: box6;
+        }
+        .b7 {
+            grid-area: box7;
+        }
+        .b8 {
+            grid-area: box8;
+        }
+        .b9 {
+            grid-area: box9;
+        }
+        .b10 {
+            grid-area: box10;
+        }
+        .b11 {
+            grid-area: box11;
+        }
+        .b12 {
+            grid-area: box12;
+        }
+    </style>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="box b1">Box 1</div>
+        <div class="box b2">Box 2</div>
+        <div class="box b3">Box 3</div>
+        <div class="box b4">Box 4</div>
+        <div class="box b5">Box 5</div>
+        <div class="box b6">Box 6</div>
+        <div class="box b7">Box 7</div>
+        <div class="box b8">Box 8</div>
+        <div class="box b9">Box 9</div>
+        <div class="box b10">Box 10</div>
+        <div class="box b11">Box 11</div>
+        <div class="box b12">Box 12</div>
+    </div>
+</body>
+</html>
