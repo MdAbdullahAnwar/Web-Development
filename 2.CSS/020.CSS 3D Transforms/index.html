@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 3-D Transforms</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+        body{
+            height:100vh;
+            width:100vw;
+        }
+        .container{
+            height:100%;
+            width:100%;
+            padding:2rem;
+            background-color:rgb(95, 90, 90);
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:3rem;
+        }
+        .box{
+            color:rgb(187, 13, 71);
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            border:solid black 2px;
+            background-color: chartreuse;
+            transition: transform 1s ease; 
+            padding:1rem;
+        }
+        #rotateX:hover{
+            transform:rotateX(45deg);
+        }
+        #rotateY:hover{
+            transform:rotateY(-45deg);
+        }
+        #rotateZ:hover{
+            transform:rotateZ(45deg);
+        }
+        #translateX:hover{
+            transform:translateX(15px);
+            /* transition-duration:5sec; */
+        }
+        #translateY:hover{
+            transform:translateY(-15px);
+        }
+        #translateZ:hover{
+            transform:perspective(300px) translateZ(15px);
+        }
+        #scaleX:hover{
+            transform:scaleX(1.5);
+            /* transition-duration:5sec; */
+        }
+        #scaleY:hover{
+            transform:scaleY(1.5);
+        }
+        #scaleZ:hover{
+            transform:perspective(300px) scaleZ(5) rotateY(30deg);
+        }
+        #skewX:hover{
+            transform:skewX(45deg);
+            /* transition-duration:5sec; */
+        }
+        #skewY:hover{
+            transform:skewY(45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box" id="rotateX">RotateX</div>
+        <div class="box" id="rotateY">RotateY</div>
+        <div class="box" id="rotateZ">RotateZ</div>
+        <div class="box" id="translateX">TranslateX</div>
+        <div class="box" id="translateY">Translatey</div>
+        <div class="box" id="translateZ">TranslateZ</div>
+        <div class="box" id="scaleX">ScaleX</div>
+        <div class="box" id="scaleY">ScaleY</div>
+        <div class="box" id="scaleZ">ScaleZ</div>
+        <div class="box" id="skewX">SkewX</div>
+        <div class="box" id="skewY">SkewY</div>
+        <div class="box" id="skewZ">SkewZ does not exists in current CSS</div>
+    </div>
+</body>
+</html>
