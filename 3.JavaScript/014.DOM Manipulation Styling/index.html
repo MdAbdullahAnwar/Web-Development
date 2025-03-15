@@ -1,3 +1,5 @@
+<!-- Changing Styles with .style Property -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,33 @@
     <script>
         function changeColor() {
             document.getElementById("heading").style.color = "red";
+        }
+    </script>
+</body>
+</html>
+
+
+
+<!-- Adding and Removing CSS Classes (classList) -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Toggle Class Example</title>
+    <style>
+        .dark-mode {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="text">Hello, JavaScript!</h1>
+    <button onclick="toggleMode()">Toggle Dark Mode</button>
+
+    <script>
+        function toggleMode() {
+            document.getElementById("text").classList.toggle("dark-mode");
         }
     </script>
 </body>
