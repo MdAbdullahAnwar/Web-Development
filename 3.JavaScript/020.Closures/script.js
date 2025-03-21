@@ -1,6 +1,5 @@
 // Example of a Closure:
 
-
 function outerFunction(outerVariable) {
   return function innerFunction(innerVariable) {
     console.log(`Outer Variable: ${outerVariable}`);
