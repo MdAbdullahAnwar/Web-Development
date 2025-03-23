@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events & Events Listener</title>
+</head>
+<body style="background-color: grey">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+   <script>
+        //onclick="alert('Owl Clicked')"    //inside owl <li>   // gives alert after clicking owl image in browser
+
+        document.getElementById('owl').onclick=function(){
+            //alert('Owl Clicked');
+        }
+
+        document.getElementById('owl').addEventListener('click',function(){
+            //alert("Clicked Owl");
+        },false);
+
+        // third parameter -->> 1)false[default] <<== Event Bubbling or 2)true <<== Event Capturing
+
+        document.getElementById('owl').addEventListener('click',function(e){
+            console.log(e);
+        },false);
+        //Pointer Events
+
+        //type ==>> console.log(e.type); ==>> click
+
+        //timestamp ==>> console.log(e.timestamp); ==>> time in ms [4322.4]
+
+        //defaultPrevent ==>> console.log(e.defaultPrevented); ==>> false
+
+        //target ==>> console.log(e.target); ==>> <img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;lazy=load" alt="">
+
+
+        //toElement ==>> console.log(e.toElement); ==>> null
+
+        //srcElement ==>> console.log(e.srcElement); ==>> <img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;lazy=load" alt="">
+
+        //currentTarget ==>> console.log(e.currentElement); ==>> <img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;lazy=load" alt="">
+
+        //clientX ==>> 58
+        //clientY ==>> 582
+        //screenX ==>> 954
+        //screenY ==>> 300
+
+        //altkey, ctrlkey. shiftkey, keyCode
+
+        
+        document.getElementById('images').addEventListener('click',function(e){
+            //console.log("clicked inside the ul");
+        },false);
+
+        document.getElementById('owl').addEventListener('click',function(e){
+            //console.log("Owl clicked only");
+        },false);
+        //clicked ==>> river => clicked inside the ul
+        //clicked ==>> owl => Owl clicked only \n clicked inside the ul ==>> Event Propogation [ false(default) -> Event Bubbling -> bottom to top]
+
+        document.getElementById('owl').addEventListener('click',function(e){
+            //e.stopPropagation();
+            //console.log("Owl clicked only");
+        },false);
+        //clicked ==>> owl => Owl clicked only
+        
+        document.getElementById('google').addEventListener('click',function(e){
+            e.preventDefault();
+            //e.stopPropagation();
+            //console.log("Google Clicked");
+        },false);
+        //Google Clicked
+        //clicked inside the ul
+
+        //e.stopPropagation(); ==>> Google Clicked
+
+        document.getElementById('images').addEventListener('click',function(e){
+            //console.log(e.target);
+        },false)
+        //<img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;lazy=load" alt="">
+
+
+        document.getElementById('images').addEventListener('click',function(e){
+            //console.log(e.target.parentNode);
+            //let removeIt = e.target.parentNode;
+            //removeIt.remove();
+        },false)
+        //<li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;lazy=load" alt=""></li>
+        //owl image removed
+
+        document.getElementById('images').addEventListener('click',function(e){
+            //console.log(e.target.parentNode);
+            //let removeIt = e.target.parentNode;
+            //removeIt.parentNode.removeChild(removeIt);
+        },false)
+        //<li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1600&amp;lazy=load" alt=""></li>
+        //river image removed
+        
+        //If we click on body of the document whole div wil be removed so use strict checks
+        
+        document.querySelector('#images').addEventListener('click',function(e){
+            console.log(e.target.tagName);
+            if(e.target.tagName === 'IMG')
+            {
+                console.log(e.target.id);
+            }
+        },false);
+        //After clicking owl image in broser ==>> IMG \n owl
+    
+    </script>
+</body>
+</html>
